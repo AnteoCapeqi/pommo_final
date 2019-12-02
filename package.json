@@ -1,0 +1,46 @@
+{
+  "name": "pomodoro",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Code for React first pomodoro",
+  "main": "src/app.js",
+  "scripts": {
+    "build": "npx parcel build src/index.html",
+    "work": "npx parcel src/index.html",
+    "lint": "npx eslint --fix --cache src"
+  },
+  "author": "Anteo with the code from leny <leny@becode.org>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leny/becode-jepsen-pomodoro/issues"
+  },
+  "homepage": "https://github.com/leny/becode-jepsen-pomodoro#readme",
+  "devDependencies": {
+    "@becode/eslint-config": "^0.8.2",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-unicorn": "^14.0.1",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^1.19.1",
+    "prop-types": "^15.7.2"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npx eslint --fix --cache",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx lint-staged"
+    }
+  },
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
